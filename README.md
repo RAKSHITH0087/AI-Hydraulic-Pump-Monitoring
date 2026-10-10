@@ -29,6 +29,16 @@ This project explores hydraulic pump condition monitoring using vibration and te
 4. Sensor readings are displayed on the OLED screen and serial monitor.
 5. When configured and connected, the ESP32 sends sensor data to a backend API over Wi-Fi.
 
+flowchart TD
+    A["Hydraulic Pump"] --> B["Vibration Sensor"]
+    A --> C["Temperature Sensor"]
+    B --> D["ESP32"]
+    C --> D
+    D --> E["Sensor Data Collection"]
+    E --> F["Data Analysis and Feature Extraction"]
+    F --> G["ML Model - In Development"]
+    G --> H["Normal / Abnormal / Critical"]
+
 ## Current Scope
 
 The hydraulic pump monitoring prototype is currently under development. The ESP32-based system collects vibration and temperature data using the MPU6050 accelerometer and DS18B20 temperature sensor.
@@ -38,6 +48,7 @@ We are currently working on developing and training the AI/ML model for hydrauli
 Our ongoing work focuses on analysing sensor data, improving the classification approach, and exploring the use of combined vibration and temperature measurements to identify pump conditions as Normal, Abnormal, and Critical.
 
 Further development and testing are planned to improve the system's reliability and its potential application in industrial predictive maintenance.
+
 
 ## Setup
 
@@ -51,5 +62,11 @@ Further development and testing are planned to improve the system's reliability 
 
 The project explores a low-cost approach to hydraulic pump condition monitoring and early fault detection to support industrial predictive maintenance.
 
+What Makes This Project Different?
 
+Comparative multisensor analysis: The project aims to compare vibration-only data with combined vibration and temperature data to investigate their usefulness for hydraulic pump fault classification.
+
+Embedded monitoring: An ESP32-based prototype collects sensor measurements, providing a foundation for a compact monitoring system.
+
+Predictive maintenance potential: The proposed three-level classification approach aims to support early investigation of abnormal pump behaviour.
 
