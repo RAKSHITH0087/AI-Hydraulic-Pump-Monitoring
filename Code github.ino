@@ -9,15 +9,15 @@
 // WIFI & API CONFIGURATION
 // =====================================================
 // Enter your WiFi network credentials:
-const char* WIFI_SSID     = "YOUR_WIFI_NAME";
-const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
+const char* WIFI_SSID     = "LENOVO IDEAPAD";
+const char* WIFI_PASSWORD = "ABCD1234";
 
 // Backend API URL:
 // Replace with the address of your own backend API.
-const char* API_URL       = "http://YOUR_SERVER_IP:8443/api/telemetry";
+const char* API_URL       = "http://10.51.28.237:8443/api/telemetry";
 
 // Replace with the same private API key configured in your backend.
-const char* API_KEY       = "YOUR_API_KEY";
+const char* API_KEY       = "change-me-to-a-long-random-string";
 
 // How often to post data to the API over WiFi (milliseconds)
 const unsigned long API_POST_INTERVAL_MS = 250; // 4 times per second
